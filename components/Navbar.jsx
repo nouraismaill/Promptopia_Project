@@ -77,21 +77,23 @@ const Navbar = () => {
               onClick={() => setToggleDropdown((prev) => !prev)}
             />
             {toggleDropdown && (
-              <div className="dropdown">
-                <Link
-                  href="/profile"
-                  className="dropdown_link"
-                  onClick={() => setToggleDropdown(false)}
-                >
-                  My Profile
-                </Link>
-                <Link
-                  href="/create-prompt"
-                  className="dropdown_link"
-                  onClick={() => setToggleDropdown(false)}
-                >
-                  Create Prompt
-                </Link>
+              <div className="dropdown z-10">
+                <div className="flex flex-col  mx-7 gap-2">
+                  <Link
+                    href="/profile"
+                    className="dropdown_link"
+                    onClick={() => setToggleDropdown(false)}
+                  >
+                    My Profile
+                  </Link>
+                  <Link
+                    href="/create-prompt"
+                    className="dropdown_link"
+                    onClick={() => setToggleDropdown(false)}
+                  >
+                    Create Prompt
+                  </Link>
+                </div>
                 <button
                   type="button"
                   className="mt-5 w-full black_btn"

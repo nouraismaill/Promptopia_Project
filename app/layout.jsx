@@ -1,4 +1,4 @@
-import Navbar from "@components/Navbar";
+import NavbarClient from "@components/NavbarClient";
 import Provider from "@components/Provider";
 import "@styles/globals.css";
 
@@ -18,8 +18,8 @@ const RootLayout = ({ children }) => {
             <div className="gradient" />
           </div>
           <main className="app">
-            <Navbar />
-            {children}
+            <NavbarClient />
+            <div suppressHydrationWarning>{children}</div>
           </main>
         </Provider>
       </body>

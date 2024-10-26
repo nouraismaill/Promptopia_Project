@@ -8,12 +8,12 @@ export function TypingAnimationDemo({ text }) {
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   return (
     <section className="w-full max-w-full flex-start flex-col">
-      <TypingAnimation text={`${type} Post!`} />
+      <TypingAnimation text={`${type} a Post!`} />
       <FadeText
         className="desc text-left max-w-md"
         direction="left"
         framerProps={{
-          show: { transition: { delay: 0 } },
+          show: { transition: { delay: 0.2 } },
         }}
         text={`${type} and share amazing prompts with the world, and let your
         imagination run wild with AI-powered platform.`}
@@ -54,28 +54,24 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         </label>
         <div className="flex-end gap-5 mb-5 mx-3">
           <Link href={"/"}>
-            <button class="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110">
-              <svg
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                fill="none"
-                class="h-5 w-5 mr-2"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                  stroke-width="2"
-                  stroke-linejoin="round"
-                  stroke-linecap="round"
-                ></path>
-              </svg>
+            <button
+              class="appearance-none bg-transparent border border-[#1A1A1A] rounded-[0.9375em] box-border text-[#3B3B3B] cursor-pointer inline-block font-sans font-semibold text-[16px] leading-normal m-0 min-h-[3.75em] min-w-0 outline-none py-4 px-[2.3em] text-center no-underline transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] select-none touch-manipulation will-change-transform
+    hover:text-white hover:bg-[#1A1A1A] hover:shadow-[0_8px_15px_rgba(0,0,0,0.25)] hover:-translate-y-0.5
+    disabled:bg-[#C7C7C7] disabled:border-[#C7C7C7] disabled:text-gray-500
+    disabled:hover:bg-[#E63535] disabled:hover:border-[#E63535] disabled:hover:text-white disabled:cursor-not-allowed disabled:hover:shadow-none disabled:hover:translate-y-0
+    active:shadow-none active:translate-y-0"
+            >
               Cancel
             </button>
           </Link>
-          <button class="Btn " type="submit" disabled={submitting}>
-            <div class="sign">+</div>
 
-            <div class="text">Create</div>
+          <button
+            className="appearance-none bg-transparent border border-[#FF5722] rounded-[0.9375em] box-border text-[#3B3B3B] cursor-pointer inline-block font-sans font-semibold text-[16px] leading-normal m-0 min-h-[3.75em] min-w-0 outline-none py-4 px-[2.25em] text-center no-underline transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] select-none touch-manipulation will-change-transform
+    hover:text-white hover:bg-[#FF5722] hover:shadow-[0_8px_15px_rgba(0,0,0,0.25)] hover:-translate-y-0.5
+    disabled:pointer-events-none
+    active:shadow-none active:translate-y-0"
+          >
+            {submitting ? `${type}...` : type}
           </button>
         </div>
       </form>

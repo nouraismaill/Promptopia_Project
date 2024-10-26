@@ -1,6 +1,9 @@
 const nextConfig = {
-  appDir: true, // Move `appDir` outside of experimental
-  serverExternalPackages: ["mongoose"], // Update to `serverExternalPackages`
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
+  serverExternalPackages: ["mongoose"],
   images: {
     domains: ["lh3.googleusercontent.com"],
   },
