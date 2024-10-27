@@ -1,8 +1,6 @@
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
+
   serverExternalPackages: ["mongoose"],
   images: {
     domains: ["lh3.googleusercontent.com"],
