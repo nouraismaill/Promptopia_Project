@@ -1,6 +1,16 @@
-// page.js
-import EditPrompt from "./EditPrompt";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
-export default function UpdatePromptPage() {
-  return <EditPrompt />;
-}
+const EditPrompt = dynamic(() => import("@components/EditPrompt"), {
+  suspense: true,
+});
+
+const Page = () => {
+  return (
+    <Suspense>
+      <EditPrompt />
+    </Suspense>
+  );
+};
+
+export default Page;
