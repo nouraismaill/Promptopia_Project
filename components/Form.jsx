@@ -13,7 +13,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         className="desc text-left max-w-md"
         direction="left"
         framerProps={{
-          show: { transition: { delay: 0.2 } },
+          show: { transition: { delay: 0.4 } },
         }}
         text={`${type} and share amazing prompts with the world, and let your
         imagination run wild with AI-powered platform.`}
@@ -55,7 +55,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <div className="flex-end gap-5 mb-5 mx-3">
           <Link href={"/"}>
             <button
-              class="appearance-none bg-transparent border border-[#1A1A1A] rounded-[0.9375em] box-border text-[#3B3B3B] cursor-pointer inline-block font-sans font-semibold text-[16px] leading-normal m-0 min-h-[3.75em] min-w-0 outline-none py-4 px-[2.3em] text-center no-underline transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] select-none touch-manipulation will-change-transform
+              className="appearance-none bg-transparent border border-[#1A1A1A] rounded-[0.9375em] box-border text-[#3B3B3B] cursor-pointer inline-block font-sans font-semibold text-[16px] leading-normal m-0 min-h-[3.75em] min-w-0 outline-none py-4 px-[2.3em] text-center no-underline transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] select-none touch-manipulation will-change-transform
     hover:text-white hover:bg-[#1A1A1A] hover:shadow-[0_8px_15px_rgba(0,0,0,0.25)] hover:-translate-y-0.5
     disabled:bg-[#C7C7C7] disabled:border-[#C7C7C7] disabled:text-gray-500
     disabled:hover:bg-[#E63535] disabled:hover:border-[#E63535] disabled:hover:text-white disabled:cursor-not-allowed disabled:hover:shadow-none disabled:hover:translate-y-0

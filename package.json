@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bcrypt": "^5.1.1",
     "framer-motion": "^11.11.10",
     "mongodb": "^6.10.0",
